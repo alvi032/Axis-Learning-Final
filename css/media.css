@@ -1,0 +1,81 @@
+@media (min-width: 1000px){
+    #learning h1, #courses h1{
+        margin: 2em 0 1em 0;
+    }
+}
+@media (max-width: 1000px){
+    #course-list{
+        grid-template-columns: repeat(2, auto);
+    }
+    #contact-form{
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 769px) {
+    header{
+        display: grid;
+    }
+}
+@media (max-width: 768px){
+    #picture-text{
+        grid-template-columns: repeat(1, auto);
+    }
+    #slider{
+        margin-top: 110px;
+        padding: 80px 0 60px;
+    }
+    #contact-container{
+        width: 100%;
+    }
+    #main-contact{
+        padding-bottom: 20px;
+    }
+    #main-contact form{
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-info{
+        margin: 50px;
+    }
+}
+@media (max-width: 600px){
+    #course-view{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #course-view ul{
+        grid-template-columns: repeat(1, auto);
+        grid-row-gap: 1em;
+        place-content: unset;
+    }
+    #parent{
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: repeat(2, auto);
+        padding: 0 2em;
+    }
+    #course-list{
+        grid-template-columns: repeat(1, auto);
+    }
+    #para{
+        width: 95%;
+    }
+    #para p{
+        box-shadow: none;
+    }
+
+}
+@media (max-device-width: 500px){
+    #learning, #courses{
+        margin-bottom: 0;
+    }
+    /*for contact page*/
+    .full, form p{
+        margin: 10px;
+    }
+    #contact-info{
+        margin: 10px;
+    }
+}

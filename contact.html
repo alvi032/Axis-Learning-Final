@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Axis Learning</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/selected-course.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <!--    <link rel="stylesheet" href="css/media.css">-->
+</head>
+<body>
+<header id="myNav">
+    <div class="container-full" id="navbar">
+        <a href="/"><img id="logo" src="images/logo.png" alt=""></a>
+        <div id="hamburger-icon">
+            <input type="checkbox" id="btnControl"/>
+            <label for="btnControl" id="label-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <ul id="nav-ul">
+            <li><a href="index">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="course">Courses</a></li>
+            <li><a href="contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <ul id="mobile-nav-ul">
+        <li><a href="/">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="course">Courses</a></li>
+        <li><a href="contact">Contact Us</a></li>
+    </ul>
+</header>
+<div id="main-contact">
+    <div id="contact-container">
+        <h1 id="contact-heading">Contact Us</h1>
+        <iframe id="location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.135558626546!2d74.32000361554672!3d31.52043658136969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905cae2aed99f%3A0x3ca7eb22ab479b43!2sAxis%20Learning%20Institute!5e0!3m2!1sen!2sus!4v1575455898494!5m2!1sen!2sus"
+                frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div id="contact-form">
+            <form action="send" method="POST">
+                <p>
+                    <label>First Name</label>
+                    <input type="text" name="firstName" required>
+                </p>
+                <p>
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" required>
+                </p>
+                <p>
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </p>
+                <p>
+                    <label>Phone</label>
+                    <input type="text" name="number">
+                </p>
+                <p class="full">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" required></textarea>
+                </p>
+                <p class="full">
+                    <button type="submit">Submit</button>
+                </p>
+
+            </form>
+            <div id="contact-info">
+                <h2>Get in Touch</h2>
+                <p><span class="bold-it">Address:</span> 11 - Wahdat Road, Opposite Gohar Center, Wahdat Road, Lahore
+                </p>
+                <p><span class="bold-it">Email:</span> info@axislearning.com</p>
+                <p><span class="bold-it">Contact Numbers:</span></p>
+                <p>0333 4243613</p>
+                <p>0321 7989787</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div id="upper-footer">
+        <div class="container">
+            <img src="images/Axis-black%20medium.png" alt="Axis Learning">
+            <div>
+                <p>info@axislearning.com</p>
+                <div class="home-social-links">
+                    <a href="https://www.facebook.com/theaxislearning/"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="https://www.instagram.com/axislearning/"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/axis-learning-528806190/"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="lower-footer">
+        <p>Axis Learning Copyrights © 2019</p>
+    </div>
+
+</footer>
+<script src="https://kit.fontawesome.com/d73f645a4a.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>

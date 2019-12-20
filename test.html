@@ -1,0 +1,20 @@
+<form PHP_SELF action="<?php echo htmlspecialchars($_SERVER[" method="post""]);?>">
+    Name: <input name="name" type="text" value="<?php echo $name;?>">
+    <span class="error">* <?php echo $nameErr;?></span>
+    <br><br>
+    E-mail: <input name="email" type="text" value="<?php echo $email;?>">
+    <span class="error">* <?php echo $emailErr;?></span>
+    <br><br>
+    Website: <input name="website" type="text" value="<?php echo $website;?>">
+    <span class="error"><?php echo $websiteErr;?></span>
+    <br><br>
+    Comment: <textarea cols="40" name="comment" rows="5"><?php echo $comment;?></textarea>
+    <br><br>
+    Gender:
+    <input name="gender" type="radio" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+    <input name="gender" type="radio" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+    <input name="gender" type="radio" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other
+    <span class="error">* <?php echo $genderErr;?></span>
+    <br><br>
+    <input name="submit" type="submit" value="Submit">
+</form>
