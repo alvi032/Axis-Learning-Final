@@ -26,6 +26,7 @@ header #navbar{
     padding: 0 2.5%;
     margin: auto;
     height: 100px;
+    box-sizing: unset !important;
 }
 #logo{
     height: 60px;
@@ -38,6 +39,7 @@ header #navbar{
     max-width: 470px;
     width: 100%;
     justify-content: space-between;
+    margin: auto 0 !important;
 }
 #nav-ul li{
     position: relative;

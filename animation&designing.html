@@ -18,6 +18,32 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <!--    <link rel="stylesheet" href="css/media.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('form').on('submit', function (e) {
+                e.preventDefault();
+                $("#download-course").attr("disabled", true);
+                $.ajax({
+                    type: 'post',
+                    url: 'mail_handler.php',
+                    data: $('form').serialize(),
+                    success: function(msg)
+                    {
+                        $("form").trigger("reset");
+                        // window.open('courses/Course Outline.docx', '_blank');
+                        window.location = 'courses/Course Outline.docx';
+                    },
+                    error: function (data) {
+
+                    }
+                });
+                $("#download-course").attr("disabled", false);
+            });
+        });
+    </script>
 </head>
 <body>
 <header id="myNav">
@@ -56,7 +82,7 @@
         <p id="course-description">It is the manipulation of 3D models or objects is carried out within 3D software for
             exporting picture sequences giving them the illusion of animation or movement. Animating objects in a
             three-dimensional space. 3D Animation can be rotated and moved like real objects. </p>
-        <form action="downloadCourse" method="POST">
+        <form>
             <p>
                 <label>First Name</label>
                 <input type="text" name="firstName" required>
@@ -78,7 +104,7 @@
                 <input type="text" name="course" value="3D Animation & Designing" readonly><br>
             </p>
             <p>
-                <button type="submit">Download Course Outline</button>
+                <button type="submit" id="download-course">Download Course Outline</button>
             </p>
         </form>
     </div>
@@ -104,7 +130,6 @@
 
 </footer>
 <script src="https://kit.fontawesome.com/d73f645a4a.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="main.js"></script>
 </body>
 
